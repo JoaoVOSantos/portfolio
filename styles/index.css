@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Resetando Valores */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: 0;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Variaveis Globais */
+:root{
+    /* Cores */
+    --Cor-Texto: #0d0d0d;
+
+    /* Tipografia */
+    --Tipo-Texto-Titulo: 'Roboto', sans-serif;
+    --Tipo-Texto-Paragrafo: 'Rubik', sans-serif;
+
+    /* Cor Contraste pra --Cor-Texto e --Cor-Titulo */
+    --Cor-Fundo-E-Contraste-Com-Titulo: #f2f2f2;
+
+    /* Cores de fundo */
+    --Cor-Fundo: #080c1c;
+    --Gradient: linear-gradient(90deg, #4facfe 0%, #8ce7fe 100%);
+
+    
+}
+/*------------------- Pagina Index -------------------------- */
+body{
+    background-color: var(--Cor-Fundo);
+ }
+.header{
+    margin-bottom: 30px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    background-color: var(--Cor-Fundo-E-Contraste-Com-Titulo);
+    height: 100px;
+    padding-left: 30px;
+    color: var(--Cor-Texto);
+    font-family: var(--Tipo-Texto-Titulo);
+    font-size: 1.05rem;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    font-family: var(--Tipo-Texto-Paragrafo);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.list ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-right: 10px;
+}
+.list ul li a{
+    color: var(--Cor-Texto);
+}
+
+.list ul li:hover{
+    transition: 500ms;
+    font-size: 1.2rem;
+    text-decoration: 2px solid var(--cor-fundo);
+    border: 1px var(--Cor-Fundo-E-Contraste-Com-Titulo) solid;
+}
+
+/* pesquisado not(hover) */
+.list ul li:not(:hover){
+    transition: 500ms;
+    font-size: 1rem;
+    border: 1px var(--Cor-Fundo-E-Contraste-Com-Titulo) solid;
+}
+
+.name{
+    font-family: var(--Tipo-Texto-Titulo);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.name label{
+    color: var(--Cor-Texto);
+    cursor: pointer;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.container-main{
+    border-radius: 5px;
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Cor-Fundo-E-Contraste-Com-Titulo);
+    height: max-content;
+}
+.container-main h1{
+    font-family: var(--Tipo-Texto-Titulo);
+    margin-bottom: 5px;
+}
+.container-main p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: var(--Tipo-Texto-Paragrafo);
+}
+.container-main .text{
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 10px;
+}
+.logos{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 20px;
+}
+.logos img{
+    margin-bottom: 10px;
+    height: auto;
+    width: 10%;
+}
+
+/*------------------- Pagina Contatos -------------------------- */
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+.redes img{
+    margin-top: 15px;
+    width: 30%;
+    height: auto;
+}
+.redes img:not(:hover){
+    transition: 500ms;
+    height: auto;
+    width: 85%;
+}
+.redes img:hover{
+    transition: 500ms;
+    height: auto;
+    width: 100%;
+}
+
+/*------------------- Pagina Sobre -------------------------- */
+.Separator{
+    height: 5px;
+    width: auto;
+    background-color: var(--Cor-Fundo);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.Separator-reverse{
+    margin-top: 10px;
+    height: 5px;
+    width: auto;
+    background-color: var(--Cor-Fundo-E-Contraste-Com-Titulo);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.container-reverse{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: var(--Cor-Fundo);
+    color: var(--Cor-Fundo-E-Contraste-Com-Titulo);
+    padding: 20px;
+    border-radius: 5px;
+}
+.container-reverse .text-middle{
+    text-align: center;
+}
+.container-picture{
+    background-color: var(--Cor-Fundo-E-Contraste-Com-Titulo);
+    height: max-content;
+    width: 20%;
+    margin-right: 20px;
+    border-radius: 0px 10px 0px 10px;
+    justify-content: center;  
+}
+.container-picture p{
+    font-family: var(--Tipo-Texto-Paragrafo);
+    font-size: 1rem;
+    margin-top: 5px;
+    text-align: left;
+    width: 90%;
+    margin-left: 15px;
+    justify-content: center;
+}
+.container-picture .container-reverse{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: auto;
+    width: auto;
+    text-align: left;
+}
+.container-picture .container-reverse h6{
+    font-family: var(--Tipo-Texto-Paragrafo);
+    font-size: 0.70rem;
+}
+.picture{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+.container-picture img{
+    border: 5px solid var(--Cor-Fundo) ;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 300px;
+}
+
+.container-buttons{
+    
+    display: flex;
+    justify-content: center;
+}
+.button-cv{
+    margin-top: 10px;
+    background-color: var(--Cor-Fundo);
+    color: var(--Cor-Fundo-E-Contraste-Com-Titulo);
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*------------------- Pagina Projetos -------------------------- */
+
+.container-reverse-servicos{
+    margin-top: 2px;
+    margin-bottom: 10px;
+    background-color: var(--Cor-Fundo);
+    color: var(--Cor-Fundo-E-Contraste-Com-Titulo);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.container-main h2{
+    font-family: var(--Tipo-Texto-Titulo);
+    margin-bottom: 5px;
+}
+
+.container-reverse-servicos a{
+    font-family: var(--Tipo-Texto-Paragrafo);
+    color: var(--Cor-Fundo-E-Contraste-Com-Titulo);
+}
+
+
+
+
+
+
